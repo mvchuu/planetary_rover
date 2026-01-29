@@ -1,0 +1,15 @@
+# Build directory 
+/buil/
+/install/
+/log/
+
+# ROS2 specific
+*.so
+*.dSYM
+*.o
+*.a
+*.pyc
+
+# CMake specific
+CMakeCache.txt
+CMakeFiles/ 
