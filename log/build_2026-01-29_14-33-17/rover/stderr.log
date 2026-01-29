@@ -1,0 +1,36 @@
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msg[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd_msgs[m[K’?
+   15 |         rclcpp::Subscription<[01;31m[Kstd_msg[m[K::msg::String>::SharedPtr subscription_;
+      |                              [01;31m[K^~~~~~~[m[K
+      |                              [32m[Kstd_msgs[m[K
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   15 |         rclcpp::Subscription<std_msg::msg::String[01;31m[K>[m[K::SharedPtr subscription_;
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:53:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   15 |         rclcpp::Subscription<std_msg::msg::String>::[01;31m[KSharedPtr[m[K subscription_;
+      |                                                     [01;31m[K^~~~~~~~~[m[K
+      |                                                              [32m[K;[m[K
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:63:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ does not name a type; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+   15 |         rclcpp::Subscription<std_msg::msg::String>::SharedPtr [01;31m[Ksubscription_[m[K;
+      |                                                               [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                               [32m[Krmw_subscription_t[m[K
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:[m[K In constructor ‘[01m[KListener::Listener()[m[K’:
+[01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:8:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+    8 |         [01;31m[Ksubscription_[m[K = this->create_subscription<std_msgs::msg::String>(
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+      |         [32m[Krmw_subscription_t[m[K
+[01m[K/home/ros2/planetary_rover/rover/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[01m[K/home/ros2/planetary_rover/rover/src/talker.cpp:8:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kthis[m[K’
+    8 |                 timer_ [01;31m[Kthis[m[K->create_wall_timer(
+      |                        [01;31m[K^~~~[m[K
+[01m[K/home/ros2/planetary_rover/rover/src/talker.cpp:8:17:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+    8 |                 [01;35m[Ktimer_[m[K this->create_wall_timer(
+      |                 [01;35m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/talker.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/listener.dir/build.make:76: CMakeFiles/listener.dir/src/listener.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/listener.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

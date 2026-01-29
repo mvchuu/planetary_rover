@@ -1,0 +1,2 @@
+Invoking command in '/home/ros2/planetary_rover/build/rover': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros2/planetary_rover/rover -DCMAKE_INSTALL_PREFIX=/home/ros2/planetary_rover/install/rover
+Invoked command in '/home/ros2/planetary_rover/build/rover' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros2/planetary_rover/rover -DCMAKE_INSTALL_PREFIX=/home/ros2/planetary_rover/install/rover

@@ -1,0 +1,51 @@
+[0.009s] Invoking command in '/home/ros2/planetary_rover/build/rover': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros2/planetary_rover/rover -DCMAKE_INSTALL_PREFIX=/home/ros2/planetary_rover/install/rover
+[0.134s] -- The C compiler identification is GNU 11.4.0
+[0.280s] -- The CXX compiler identification is GNU 11.4.0
+[0.295s] -- Detecting C compiler ABI info
+[0.372s] -- Detecting C compiler ABI info - done
+[0.377s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.378s] -- Detecting C compile features
+[0.378s] -- Detecting C compile features - done
+[0.382s] -- Detecting CXX compiler ABI info
+[0.455s] -- Detecting CXX compiler ABI info - done
+[0.460s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.460s] -- Detecting CXX compile features
+[0.461s] -- Detecting CXX compile features - done
+[0.463s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.586s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.657s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.686s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.690s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.696s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.706s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.718s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.754s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.756s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.835s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.856s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.889s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.900s] -- Looking for pthread.h
+[0.962s] -- Looking for pthread.h - found
+[0.963s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.027s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.028s] -- Found Threads: TRUE  
+[1.075s] [31mCMake Error at CMakeLists.txt:11 (find_package):
+[1.076s]   By not providing "Findstd-msgs.cmake" in CMAKE_MODULE_PATH this project has
+[1.076s]   asked CMake to find a package configuration file provided by "std-msgs",
+[1.076s]   but CMake did not find one.
+[1.076s] 
+[1.076s]   Could not find a package configuration file provided by "std-msgs" with any
+[1.076s]   of the following names:
+[1.076s] 
+[1.076s]     std-msgsConfig.cmake
+[1.076s]     std-msgs-config.cmake
+[1.076s] 
+[1.076s]   Add the installation prefix of "std-msgs" to CMAKE_PREFIX_PATH or set
+[1.076s]   "std-msgs_DIR" to a directory containing one of the above files.  If
+[1.076s]   "std-msgs" provides a separate development package or SDK, be sure it has
+[1.076s]   been installed.
+[1.076s] 
+[1.076s] [0m
+[1.076s] -- Configuring incomplete, errors occurred!
+[1.076s] See also "/home/ros2/planetary_rover/build/rover/CMakeFiles/CMakeOutput.log".
+[1.082s] Invoked command in '/home/ros2/planetary_rover/build/rover' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros2/planetary_rover/rover -DCMAKE_INSTALL_PREFIX=/home/ros2/planetary_rover/install/rover

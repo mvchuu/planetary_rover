@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target listener[0m
+[35m[1mConsolidate compiler generated dependencies of target talker[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/listener.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable talker[0m
+[ 75%] Built target talker
+[100%] [32m[1mLinking CXX executable listener[0m
+[100%] Built target listener
+-- Install configuration: ""
+-- Installing: /home/ros2/planetary_rover/install/rover/share/ament_index/resource_index/package_run_dependencies/rover
+-- Installing: /home/ros2/planetary_rover/install/rover/share/ament_index/resource_index/parent_prefix_path/rover
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/ament_prefix_path.sh
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/ament_prefix_path.dsv
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/path.sh
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/path.dsv
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.bash
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.sh
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.zsh
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.dsv
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/package.dsv
+-- Installing: /home/ros2/planetary_rover/install/rover/share/ament_index/resource_index/packages/rover
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/cmake/roverConfig.cmake
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/cmake/roverConfig-version.cmake
+-- Installing: /home/ros2/planetary_rover/install/rover/share/rover/package.xml

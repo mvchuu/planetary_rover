@@ -1,0 +1,63 @@
+[0.008s] Invoking command in '/home/ros2/planetary_rover/build/rover': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros2/planetary_rover/rover -DCMAKE_INSTALL_PREFIX=/home/ros2/planetary_rover/install/rover
+[0.019s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.119s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.140s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.141s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.146s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.153s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.162s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.185s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.186s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.262s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.296s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.356s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.356s] -- Configured cppcheck include dirs: 
+[0.357s] -- Configured cppcheck exclude dirs and/or files: 
+[0.357s] -- Added test 'lint_cmake' to check CMake code style
+[0.358s] -- Added test 'uncrustify' to check C / C++ code style
+[0.358s] -- Configured uncrustify additional arguments: 
+[0.358s] -- Added test 'xmllint' to check XML markup files
+[0.359s] -- Configuring done
+[0.369s] -- Generating done
+[0.372s] -- Build files have been written to: /home/ros2/planetary_rover/build/rover
+[0.379s] Invoked command in '/home/ros2/planetary_rover/build/rover' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ros2/planetary_rover/rover -DCMAKE_INSTALL_PREFIX=/home/ros2/planetary_rover/install/rover
+[0.381s] Invoking command in '/home/ros2/planetary_rover/build/rover': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ros2/planetary_rover/build/rover -- -j4 -l4
+[0.424s] [ 25%] [32mBuilding CXX object CMakeFiles/listener.dir/src/listener.cpp.o[0m
+[0.424s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[2.272s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msg[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd_msgs[m[K’?
+[2.272s]    15 |         rclcpp::Subscription<[01;31m[Kstd_msg[m[K::msg::String>::SharedPtr subscription_;
+[2.272s]       |                              [01;31m[K^~~~~~~[m[K
+[2.272s]       |                              [32m[Kstd_msgs[m[K
+[2.272s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.272s]    15 |         rclcpp::Subscription<std_msg::msg::String[01;31m[K>[m[K::SharedPtr subscription_;
+[2.272s]       |                                                  [01;31m[K^[m[K
+[2.272s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[2.272s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[2.272s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[2.272s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:53:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.272s]    15 |         rclcpp::Subscription<std_msg::msg::String>::[01;31m[KSharedPtr[m[K subscription_;
+[2.272s]       |                                                     [01;31m[K^~~~~~~~~[m[K
+[2.273s]       |                                                              [32m[K;[m[K
+[2.273s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:15:63:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ does not name a type; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[2.273s]    15 |         rclcpp::Subscription<std_msg::msg::String>::SharedPtr [01;31m[Ksubscription_[m[K;
+[2.274s]       |                                                               [01;31m[K^~~~~~~~~~~~~[m[K
+[2.274s]       |                                                               [32m[Krmw_subscription_t[m[K
+[2.278s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:[m[K In constructor ‘[01m[KListener::Listener()[m[K’:
+[2.278s] [01m[K/home/ros2/planetary_rover/rover/src/listener.cpp:8:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[2.278s]     8 |         [01;31m[Ksubscription_[m[K = this->create_subscription<std_msgs::msg::String>(
+[2.278s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[2.278s]       |         [32m[Krmw_subscription_t[m[K
+[2.299s] [01m[K/home/ros2/planetary_rover/rover/src/talker.cpp:[m[K In constructor ‘[01m[KTalker::Talker()[m[K’:
+[2.299s] [01m[K/home/ros2/planetary_rover/rover/src/talker.cpp:8:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kthis[m[K’
+[2.299s]     8 |                 timer_ [01;31m[Kthis[m[K->create_wall_timer(
+[2.299s]       |                        [01;31m[K^~~~[m[K
+[2.299s] [01m[K/home/ros2/planetary_rover/rover/src/talker.cpp:8:17:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[2.299s]     8 |                 [01;35m[Ktimer_[m[K this->create_wall_timer(
+[2.299s]       |                 [01;35m[K^~~~~~[m[K
+[2.878s] gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/talker.cpp.o] Error 1
+[2.879s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/talker.dir/all] Error 2
+[2.879s] gmake[1]: *** Waiting for unfinished jobs....
+[3.972s] gmake[2]: *** [CMakeFiles/listener.dir/build.make:76: CMakeFiles/listener.dir/src/listener.cpp.o] Error 1
+[3.972s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/listener.dir/all] Error 2
+[3.972s] gmake: *** [Makefile:146: all] Error 2
+[3.976s] Invoked command in '/home/ros2/planetary_rover/build/rover' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ros2/planetary_rover/build/rover -- -j4 -l4

@@ -1,0 +1,28 @@
+[0.007s] Invoking command in '/home/ros2/planetary_rover/build/rover': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ros2/planetary_rover/build/rover -- -j4 -l4
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target listener[0m
+[0.047s] [35m[1mConsolidate compiler generated dependencies of target talker[0m
+[0.059s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/listener.cpp.o[0m
+[0.059s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/talker.cpp.o[0m
+[3.253s] [ 75%] [32m[1mLinking CXX executable talker[0m
+[3.391s] [ 75%] Built target talker
+[6.047s] [100%] [32m[1mLinking CXX executable listener[0m
+[6.287s] [100%] Built target listener
+[6.298s] Invoked command in '/home/ros2/planetary_rover/build/rover' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ros2/planetary_rover/build/rover -- -j4 -l4
+[6.307s] Invoking command in '/home/ros2/planetary_rover/build/rover': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ros2/planetary_rover/build/rover
+[6.313s] -- Install configuration: ""
+[6.313s] -- Installing: /home/ros2/planetary_rover/install/rover/share/ament_index/resource_index/package_run_dependencies/rover
+[6.314s] -- Installing: /home/ros2/planetary_rover/install/rover/share/ament_index/resource_index/parent_prefix_path/rover
+[6.314s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/ament_prefix_path.sh
+[6.314s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/ament_prefix_path.dsv
+[6.314s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/path.sh
+[6.315s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/environment/path.dsv
+[6.315s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.bash
+[6.315s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.sh
+[6.315s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.zsh
+[6.315s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/local_setup.dsv
+[6.315s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/package.dsv
+[6.315s] -- Installing: /home/ros2/planetary_rover/install/rover/share/ament_index/resource_index/packages/rover
+[6.316s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/cmake/roverConfig.cmake
+[6.316s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/cmake/roverConfig-version.cmake
+[6.316s] -- Installing: /home/ros2/planetary_rover/install/rover/share/rover/package.xml
+[6.318s] Invoked command in '/home/ros2/planetary_rover/build/rover' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ros2/planetary_rover/build/rover
