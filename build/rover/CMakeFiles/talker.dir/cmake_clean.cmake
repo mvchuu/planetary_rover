@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/talker.dir/src/talker.cpp.o"
-  "CMakeFiles/talker.dir/src/talker.cpp.o.d"
+  "CMakeFiles/talker.dir/src/energy_node.cpp.o"
+  "CMakeFiles/talker.dir/src/energy_node.cpp.o.d"
   "talker"
   "talker.pdb"
 )

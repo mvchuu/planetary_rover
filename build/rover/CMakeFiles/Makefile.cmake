@@ -643,6 +643,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/rover_uninstall.dir/DependInfo.cmake"
-  "CMakeFiles/talker.dir/DependInfo.cmake"
-  "CMakeFiles/listener.dir/DependInfo.cmake"
+  "CMakeFiles/energy_node.dir/DependInfo.cmake"
+  "CMakeFiles/drive_node.dir/DependInfo.cmake"
   )

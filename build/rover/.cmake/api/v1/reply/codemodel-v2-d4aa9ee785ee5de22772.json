@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-9f889201fe3eec7ee8d1.json",
+					"jsonFile" : "directory-.-3f064ee7068b479253ea.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.12"
@@ -45,9 +45,16 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "listener::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-listener-0da57dde9433e0c82535.json",
-					"name" : "listener",
+					"id" : "drive_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drive_node-0ed34a7edc6fd340e161.json",
+					"name" : "drive_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "energy_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-energy_node-a4b2a4c441d7ae7b6ec3.json",
+					"name" : "energy_node",
 					"projectIndex" : 0
 				},
 				{
@@ -55,13 +62,6 @@
 					"id" : "rover_uninstall::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-rover_uninstall-63790d898e1516fe0bb8.json",
 					"name" : "rover_uninstall",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "talker::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-talker-efb47278fab326062d2b.json",
-					"name" : "talker",
 					"projectIndex" : 0
 				},
 				{

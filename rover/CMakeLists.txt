@@ -10,6 +10,24 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
+add_executable(energy_node src/energy_node.cpp)
+ament_target_dependencies(energy_node
+	rclcpp
+	std_msgs
+)
+
+add_executable(drive_node src/drive_node.cpp)
+ament_target_dependencies(drive_node
+	rclcpp
+	std_msgs
+)
+
+install(TARGETS
+	energy_node
+	drive_node
+	DESTINATION lib/${rover}
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
@@ -21,11 +39,5 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
-add_executable(talker src/talker.cpp)
-ament_target_dependencies(talker rclcpp std_msgs)
-
-add_executable(listener src/listener.cpp)
-ament_target_dependencies(listener rclcpp std_msgs)
 
 ament_package()
