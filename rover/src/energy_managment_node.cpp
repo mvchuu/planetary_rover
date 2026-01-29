@@ -114,19 +114,19 @@ private:
             charging_ = true;
             solar_generation_ = 80.0f; // Symulacja paneli słonecznych
             RCLCPP_INFO(this->get_logger(), 
-                       "⚡ CHARGING STARTED - Solar panels deployed");
+                       "CHARGING STARTED - Solar panels deployed");
         } 
         else if (msg->data == "STOP") {
             charging_ = false;
             solar_generation_ = 0.0f;
             RCLCPP_INFO(this->get_logger(), 
-                       "⚡ CHARGING STOPPED");
+                       "CHARGING STOPPED");
         }
         else if (msg->data == "NIGHT") {
             charging_ = false;
             solar_generation_ = 0.0f;
             RCLCPP_WARN(this->get_logger(), 
-                       "🌙 NIGHT MODE - No solar generation");
+                       "NIGHT MODE - No solar generation");
         }
     }
 
@@ -157,7 +157,7 @@ private:
                 charging_ = false;
                 solar_generation_ = 0.0f;
                 RCLCPP_INFO(this->get_logger(), 
-                           "🔋 BATTERY FULLY CHARGED - Auto-stop charging");
+                           "BATTERY FULLY CHARGED - Auto-stop charging");
             }
             
             // Temperatura rośnie podczas ładowania
@@ -165,7 +165,7 @@ private:
             if (temperature_ > 45.0f) {
                 temperature_ = 45.0f;
                 RCLCPP_WARN(this->get_logger(), 
-                           "⚠️  HIGH TEMPERATURE WARNING: %.1f°C", temperature_);
+                           "HIGH TEMPERATURE WARNING: %.1f°C", temperature_);
             }
         } 
         else {
@@ -176,7 +176,7 @@ private:
             if (battery_level_ < 0.0f) {
                 battery_level_ = 0.0f;
                 RCLCPP_ERROR(this->get_logger(), 
-                            "🚨 CRITICAL: BATTERY DEPLETED!");
+                            "CRITICAL: BATTERY DEPLETED!");
             }
             
             // Temperatura spada
@@ -236,7 +236,7 @@ private:
         // Log zmiany trybu
         if (old_mode != current_mode_) {
             RCLCPP_WARN(this->get_logger(), 
-                       "⚡ POWER MODE CHANGED: %s → %s (Battery: %.1f%%)",
+                       "POWER MODE CHANGED: %s → %s (Battery: %.1f%%)",
                        getModeString(old_mode).c_str(),
                        getModeString(current_mode_).c_str(),
                        battery_level_);
@@ -246,7 +246,7 @@ private:
         if (current_mode_ == PowerMode::EMERGENCY && 
             old_mode != PowerMode::EMERGENCY) {
             RCLCPP_ERROR(this->get_logger(), 
-                        "🚨🚨🚨 EMERGENCY MODE ACTIVATED! 🚨🚨🚨");
+                        "EMERGENCY MODE ACTIVATED!");
             RCLCPP_ERROR(this->get_logger(), 
                         "Battery critically low: %.1f%%", battery_level_);
         }
@@ -287,7 +287,7 @@ private:
         consumption_pub_->publish(consumption_msg);
 
         // Szczegółowy log
-        std::string charge_status = charging_ ? "⚡CHARGING" : "DISCHARGING";
+        std::string charge_status = charging_ ? "CHARGING" : "DISCHARGING";
         RCLCPP_INFO(this->get_logger(),
                    "Energy: %.1f%% [%s] | %.1fV | %.1f°C | Solar: %.1fW | Consumption: %.1fW | %s",
                    battery_level_,

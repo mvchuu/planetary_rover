@@ -6,7 +6,7 @@
 
 /**
  * @brief Węzeł sterowania napędem łazika planetarnego
- * 
+ *
  * Reaguje na tryby energetyczne i wykonuje komendy ruchu
  * z uwzględnieniem ograniczeń energetycznych
  */
@@ -99,7 +99,7 @@ private:
         
         if (old_mode != energy_mode_) {
             RCLCPP_INFO(this->get_logger(),
-                       "⚡ Energy mode updated: %s → %s",
+                       "Energy mode updated: %s to %s",
                        old_mode.c_str(),
                        energy_mode_.c_str());
             updateMaxSpeed();
@@ -127,7 +127,7 @@ private:
             if (current_speed_ > max_speed_) {
                 current_speed_ = max_speed_;
                 RCLCPP_WARN(this->get_logger(),
-                           "🐢 Speed reduced to %.2f m/s due to LOW_POWER mode",
+                           "Speed reduced to %.2f m/s due to LOW_POWER mode",
                            current_speed_ / 100.0f);
             }
         } 
@@ -136,7 +136,7 @@ private:
             if (current_speed_ > max_speed_) {
                 current_speed_ = max_speed_;
                 RCLCPP_WARN(this->get_logger(),
-                           "🐌 Speed reduced to %.2f m/s due to CRITICAL mode",
+                           "Speed reduced to %.2f m/s due to CRITICAL mode",
                            current_speed_ / 100.0f);
             }
         } 
@@ -144,7 +144,7 @@ private:
             max_speed_ = 0.0f;
             current_speed_ = 0.0f;
             RCLCPP_ERROR(this->get_logger(),
-                        "🛑 ALL MOVEMENT DISABLED - EMERGENCY MODE!");
+                        "ALL MOVEMENT DISABLED - EMERGENCY MODE!");
         }
 
         if (old_max != max_speed_) {
@@ -164,7 +164,7 @@ private:
         if (energy_mode_ == "EMERGENCY" && 
             cmd != "STOP" && cmd != "CHARGE" && cmd != "STATUS") {
             RCLCPP_ERROR(this->get_logger(),
-                        "🚨 EMERGENCY MODE! Command [%s] BLOCKED. Battery: %.1f%%",
+                        "EMERGENCY MODE! Command [%s] BLOCKED. Battery: %.1f%%",
                         cmd.c_str(), battery_level_);
             RCLCPP_ERROR(this->get_logger(),
                         "Only CHARGE command available!");
@@ -175,7 +175,7 @@ private:
             cmd != "STOP" && cmd != "CHARGE" && cmd != "STATUS" && 
             cmd != "SLOW_FORWARD") {
             RCLCPP_WARN(this->get_logger(),
-                       "⚠️  CRITICAL ENERGY! Command [%s] blocked. Battery: %.1f%%",
+                       "CRITICAL ENERGY! Command [%s] blocked. Battery: %.1f%%",
                        cmd.c_str(), battery_level_);
             RCLCPP_WARN(this->get_logger(),
                        "Consider charging. Only SLOW_FORWARD, STOP, CHARGE available.");
@@ -194,33 +194,33 @@ private:
             current_speed_ = max_speed_ * 0.8f;
             is_moving_ = true;
             RCLCPP_INFO(this->get_logger(), 
-                       "🚀 Moving FORWARD at %.2f m/s", 
+                       "Moving FORWARD at %.2f m/s", 
                        current_speed_ / 100.0f);
         }
         else if (cmd == "SLOW_FORWARD") {
             current_speed_ = max_speed_ * 0.3f;
             is_moving_ = true;
             RCLCPP_INFO(this->get_logger(), 
-                       "🐢 Moving SLOW FORWARD at %.2f m/s", 
+                       "Moving SLOW FORWARD at %.2f m/s", 
                        current_speed_ / 100.0f);
         }
         else if (cmd == "BACKWARD") {
             current_speed_ = -max_speed_ * 0.5f;
             is_moving_ = true;
             RCLCPP_INFO(this->get_logger(), 
-                       "⬅️  Moving BACKWARD at %.2f m/s", 
+                       "Moving BACKWARD at %.2f m/s", 
                        std::abs(current_speed_) / 100.0f);
         }
         else if (cmd == "STOP") {
             current_speed_ = 0.0f;
             is_moving_ = false;
-            RCLCPP_INFO(this->get_logger(), "🛑 STOPPED");
+            RCLCPP_INFO(this->get_logger(), "STOPPED");
         }
         else if (cmd == "SPEED_UP") {
             if (current_speed_ < max_speed_) {
                 current_speed_ = std::min(current_speed_ + 10.0f, max_speed_);
                 RCLCPP_INFO(this->get_logger(), 
-                           "⚡ Speed increased to %.2f m/s", 
+                           "Speed increased to %.2f m/s", 
                            current_speed_ / 100.0f);
             } else {
                 RCLCPP_WARN(this->get_logger(), 
@@ -232,7 +232,7 @@ private:
             if (current_speed_ > 0.0f) {
                 current_speed_ = std::max(current_speed_ - 10.0f, 0.0f);
                 RCLCPP_INFO(this->get_logger(), 
-                           "🐌 Speed decreased to %.2f m/s", 
+                           "Speed decreased to %.2f m/s", 
                            current_speed_ / 100.0f);
             }
         }
@@ -243,20 +243,20 @@ private:
             charge_msg.data = "START";
             charging_control_pub_->publish(charge_msg);
             RCLCPP_INFO(this->get_logger(), 
-                       "🔌 CHARGING initiated. Deploying solar panels...");
+                       "CHARGING initiated. Deploying solar panels...");
         }
         else if (cmd == "STOP_CHARGE") {
             auto charge_msg = std_msgs::msg::String();
             charge_msg.data = "STOP";
             charging_control_pub_->publish(charge_msg);
-            RCLCPP_INFO(this->get_logger(), "🔌 CHARGING stopped");
+            RCLCPP_INFO(this->get_logger(), "CHARGING stopped");
         }
         else if (cmd == "STATUS") {
             printStatus();
         }
         else {
             RCLCPP_WARN(this->get_logger(), 
-                       "❌ Unknown command: %s", cmd.c_str());
+                       "Unknown command: %s", cmd.c_str());
             printAvailableCommands();
         }
 
@@ -285,7 +285,7 @@ private:
     void checkAutoCharge() {
         if (battery_level_ < 15.0f && current_speed_ == 0.0f) {
             RCLCPP_WARN(this->get_logger(),
-                       "⚠️  AUTO-CHARGE recommended! Battery: %.1f%%", 
+                       "AUTO-CHARGE recommended! Battery: %.1f%%", 
                        battery_level_);
             RCLCPP_INFO(this->get_logger(),
                        "Send command: CHARGE");
@@ -327,7 +327,6 @@ private:
         RCLCPP_INFO(this->get_logger(), "╚════════════════════════════════════════════════════╝");
         RCLCPP_INFO(this->get_logger(), "");
     }
-
     /**
      * @brief Wyświetl dostępne komendy
      */
